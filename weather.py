@@ -6,7 +6,7 @@ print (f.renderText('weather report'))
 City = str(input('enter your city name: '))
 api_key ='04018081b69cca6f721c5ed1a46be071'
 base_url = 'https://api.openweathermap.org/data/2.5/weather?'
-url = base_url+'appid='+api_key+'&q='+City
+url = base_url+'appid='+api_key+'&q='+City+'&units=metric'
 response = requests.get(url)
 x=response.json()
 print (x)
