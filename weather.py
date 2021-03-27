@@ -9,7 +9,6 @@ base_url = 'https://api.openweathermap.org/data/2.5/weather?'
 url = base_url+'appid='+api_key+'&q='+City+'&units=metric'
 response = requests.get(url)
 x=response.json()
-print (x)
 if x['cod']!=401:
     print ('city name:',x['name'])
     print ('weather:',x['weather'])
